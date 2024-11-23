@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --background: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-border: rgba(255, 255, 255, 0.3);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --accent-color: #ffffff;
+}
+
+.dashboard {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text-primary);
+    width: 100%;
+    max-width: 100%;
+}
+
+.dashboard-header {
+    padding: 1.5rem 2rem;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+}
+
+.user-name {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.logout-btn i {
+    font-size: 16px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.card-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.value-updated {
+    animation: valueUpdate 0.3s ease;
+}
+
+.card-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.game-container {
+    grid-column: 1 / -1;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.token-display {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.token-display i {
+    color: #ffd700;
+}
+
+.tokens-per-click {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.game-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 400px;
+    padding: 2rem;
+}
+
+.coin-target {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    background-image: url('../bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.coin-target:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.coin-target:active {
+    transform: scale(0.95);
+}
+
+.coin-target i {
+    display: none;
+}
+
+.token-popup {
+    position: absolute;
+    color: #ffd700;
+    font-weight: bold;
+    pointer-events: none;
+    animation: floatUp 0.8s ease-out forwards;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.upgrades-section {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.upgrade-item {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.upgrade-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.upgrade-title {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.upgrade-cost {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.upgrade-button {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upgrade-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--hover-border);
+}
+
+.upgrade-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.score-display, .timer-display, .high-score {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-header {
+        padding: 1rem;
+    }
+    
+    .card-value {
+        font-size: 1.5rem;
+    }
+}
+
+.card-icon.fa-hourglass-half {
+    color: #6366f1;
+    animation: flip 2s infinite linear;
+}
+
+@keyframes flip {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#remainingTime {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.1em;
+}
+
+.reward-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(99, 102, 241, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.dashboard-card:nth-child(2):hover {
+    border-color: #6366f1;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.dashboard-card:nth-child(2) .card-value {
+    color: #6366f1;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.countdown-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+}
+
+.countdown-item span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.countdown-item span:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.countdown-item .label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: lowercase;
+}
+
+.dashboard-card:nth-child(2) {
+    text-align: center;
+}
+
+.dashboard-card:nth-child(2):hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-icon.fa-hourglass-half {
+    color: #fff;
+    animation: flip 2s infinite linear;
+}
+ 
