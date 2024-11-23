@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Kombat</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1>Dragon Kombat</h1>
+            <p class="hero-subtitle">The Next Generation Crypto Platform</p>
+            <a href="#" class="button" id="getStartedBtn">
+                <span>Get Started</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title">Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>1M+</h3>
+                    <p>Total Pool</p>
+                </div>
+                <div class="stat-box">
+                    <h3>15.4K</h3>
+                    <p>Participants</p>
+                </div>
+                <div class="stat-box">
+                    <div id="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <span class="label">d</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <span class="label">h</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <span class="label">m</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <span class="label">s</span>
+                        </div>
+                    </div>
+                    <p>Time Remaining</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Connect Wallet</h3>
+                    <p>Link your Web3 wallet to participate in the airdrop</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Complete Tasks</h3>
+                    <p>Engage with our community and complete social tasks</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Earn Points</h3>
+                    <p>Accumulate points to increase your allocation</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>Claim Tokens</h3>
+                    <p>Receive your tokens when the airdrop goes live</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Featured Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <i class="fas fa-shield-alt partner-icon"></i>
+                    <h3>CryptoVault</h3>
+                    <p>Leading digital asset custody solution</p>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-cube partner-icon"></i>
+                    <h3>BlockChain Labs</h3>
+                    <p>Innovative blockchain research & development</p>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-chart-line partner-icon"></i>
+                    <h3>TechFin Pro</h3>
+                    <p>Next-gen financial technology solutions</p>
+                </div>
+                <div class="partner-card">
+                    <i class="fas fa-lock partner-icon"></i>
+                    <h3>SecureNet</h3>
+                    <p>Advanced blockchain security protocols</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <h2 class="section-title">Latest News & Updates</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>March 20, 2024</span>
+                    </div>
+                    <i class="fas fa-shield-alt news-icon"></i>
+                    <h3>Advanced Security Protocol Launch</h3>
+                    <p>Introducing our next-generation security protocols with quantum-resistant encryption for enhanced blockchain protection.</p>
+                    <div class="news-meta">
+                        <span class="news-category">Security</span>
+                        <span class="news-read-time">5 min read</span>
+                    </div>
+                    <a href="blogs/security-protocol.html" class="news-link">
+                        Read Article 
+                        <span class="news-link-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>March 18, 2024</span>
+                    </div>
+                    <i class="fas fa-chart-line news-icon"></i>
+                    <h3>Market Analysis Q1 2024</h3>
+                    <p>Deep dive into blockchain market trends, DeFi developments, and cryptocurrency performance analysis for Q1 2024.</p>
+                    <div class="news-meta">
+                        <span class="news-category">Market</span>
+                        <span class="news-read-time">8 min read</span>
+                    </div>
+                    <a href="/blogs/market-analysis.html" class="news-link">
+                        Read Article 
+                        <span class="news-link-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>March 15, 2024</span>
+                    </div>
+                    <i class="fas fa-code news-icon"></i>
+                    <h3>Developer Tools Update</h3>
+                    <p>New suite of developer tools released with improved API integration, testing frameworks, and documentation.</p>
+                    <div class="news-meta">
+                        <span class="news-category">Development</span>
+                        <span class="news-read-time">6 min read</span>
+                    </div>
+                    <a href="blogs/developer-tools.html" class="news-link">
+                        Read Article 
+                        <span class="news-link-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Prouple</h3>
+                    <p>The Next Generation Crypto Platform. Building the future of secure, decentralized solutions for everyone.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="#stats">Statistics</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>News</h3>
+                    <ul>
+                        <li><a href="blogs/security-protocol.html">Security Updates</a></li>
+                        <li><a href="blogs/market-analysis.html">Market Analysis</a></li>
+                        <li><a href="blogs/developer-tools.html">Developer Tools</a></li>
+                        <li><a href="#news">Latest News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Join Our Community</h3>
+                    <p>Stay updated with the latest crypto news and updates</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Theblackdragon. All rights reserved.</p>
+               
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <div class="auth-header">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="button">Login</button>
+                    <div class="form-footer">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form id="signupForm" class="auth-form">
+                    <div class="form-group">
+                        <input type="text" name="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="confirmPassword" placeholder="Confirm Password" minlength="6" required>
+                    </div>
+                    <button type="submit" class="button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBsWDkSYGE3lf7HA3Hgur-Et4CZn3w0oUM",
+        authDomain: "prouple-auth.firebaseapp.com",
+        projectId: "prouple-auth",
+        storageBucket: "prouple-auth.appspot.com",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

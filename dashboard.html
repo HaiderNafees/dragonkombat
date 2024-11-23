@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Kombat Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="dashboard-header">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span class="user-name">Loading...</span>
+            </div>
+            <button id="logoutButton" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </header>
+
+        <main class="dashboard-content">
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-label">Total Coins</span>
+                    <i class="fas fa-coins card-icon"></i>
+                </div>
+                <div class="card-value" id="totalCoins">0</div>
+                <div class="card-label">Lifetime earnings</div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-label">Time Remaining</span>
+                    <i class="fas fa-hourglass-half card-icon"></i>
+                </div>
+                <div class="countdown-display">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class="label">d</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class="label">h</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class="label">m</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span class="label">s</span>
+                    </div>
+                </div>
+                <div class="card-label">Until March 31st, 2025</div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <span class="card-label">Total Profit</span>
+                    <i class="fas fa-dollar-sign card-icon"></i>
+                </div>
+                <div class="card-value">$3,240.50</div>
+                <div class="card-label">This month</div>
+            </div>
+
+            <div class="game-container">
+                <div class="game-header">
+                    <div class="token-display">
+                        <i class="fas fa-coins"></i>
+                        <span id="tokenCount">0</span> Tokens
+                    </div>
+                    <div class="tokens-per-click">+<span id="tokenPerClick">1</span> per tap</div>
+                </div>
+                <div class="game-area">
+                    <div id="coinTarget" class="coin-target">
+                        <!-- Remove the icon element since we're using background image -->
+                    </div>
+                </div>
+                <!-- <div class="upgrades-section">
+                    <div class="upgrade-item" id="clickUpgrade">
+                        <div class="upgrade-info">
+                            <span class="upgrade-title">Upgrade Tap Power</span>
+                            <span class="upgrade-cost">Cost: <span id="upgradeCost">50</span> tokens</span>
+                        </div> -->
+                        <!-- <button class="upgrade-button">Upgrade</button> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
